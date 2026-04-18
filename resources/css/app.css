@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-up {
+	0% {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.stitch-reveal {
+	opacity: 0;
+	animation: fade-up 700ms ease-out forwards;
+}
+
+.stitch-delay-1 {
+	animation-delay: 120ms;
+}
+
+.stitch-delay-2 {
+	animation-delay: 220ms;
+}
+
+.stitch-delay-3 {
+	animation-delay: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.stitch-reveal {
+		opacity: 1;
+		animation: none;
+	}
+}
